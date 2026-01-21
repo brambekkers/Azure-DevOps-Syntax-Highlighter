@@ -79,6 +79,13 @@ const THEME_CLASSES = [
   'hljs-monokai',
   'hljs-dracula',
   'hljs-one-dark',
+  'hljs-dark-modern',
+  'hljs-abyss',
+  'hljs-dark-vs',
+  'hljs-dark-plus',
+  'hljs-solarized-dark',
+  'hljs-monokai-dimmed',
+  'hljs-dark-high-contrast',
 ]
 
 // Theme background colors
@@ -88,6 +95,13 @@ const THEME_BACKGROUNDS: Record<string, string> = {
   'hljs-monokai': '#272822',
   'hljs-dracula': '#282a36',
   'hljs-one-dark': '#282c34',
+  'hljs-dark-modern': '#1f1f1f',
+  'hljs-abyss': '#000c18',
+  'hljs-dark-vs': '#1e1e1e',
+  'hljs-dark-plus': '#1e1e1e',
+  'hljs-solarized-dark': '#002b36',
+  'hljs-monokai-dimmed': '#1e1e1e',
+  'hljs-dark-high-contrast': '#000000',
 }
 
 // Theme line number colors
@@ -97,6 +111,13 @@ const THEME_LINE_COLORS: Record<string, string> = {
   'hljs-monokai': '#90908a',
   'hljs-dracula': '#6272a4',
   'hljs-one-dark': '#495162',
+  'hljs-dark-modern': '#6e7681',
+  'hljs-abyss': '#6688cc',
+  'hljs-dark-vs': '#858585',
+  'hljs-dark-plus': '#858585',
+  'hljs-solarized-dark': '#586e75',
+  'hljs-monokai-dimmed': '#90908a',
+  'hljs-dark-high-contrast': '#ffffff',
 }
 
 /**

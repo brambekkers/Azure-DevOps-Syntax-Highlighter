@@ -706,3 +706,904 @@
 .repos-diff-contents .azure-syntax-highlighted {
   background: transparent !important;
 }
+
+/* ============================================
+   VS Code Dark Modern Theme
+   ============================================ */
+.hljs-dark-modern {
+  color: #cccccc !important;
+  background-color: #1f1f1f !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-dark-modern .hljs-comment,
+.hljs-dark-modern .hljs-quote {
+  color: #6a9955 !important;
+  font-style: italic !important;
+}
+
+.hljs-dark-modern .hljs-keyword,
+.hljs-dark-modern .hljs-selector-tag {
+  color: #569cd6 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-modern .hljs-string,
+.hljs-dark-modern .hljs-addition {
+  color: #ce9178 !important;
+}
+
+.hljs-dark-modern .hljs-number,
+.hljs-dark-modern .hljs-literal {
+  color: #b5cea8 !important;
+}
+
+.hljs-dark-modern .hljs-built_in,
+.hljs-dark-modern .hljs-builtin-name {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-modern .hljs-function,
+.hljs-dark-modern .hljs-title,
+.hljs-dark-modern .hljs-title.function_ {
+  color: #dcdcaa !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-modern .hljs-class .hljs-title,
+.hljs-dark-modern .hljs-title.class_ {
+  color: #4ec9b0 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-modern .hljs-variable,
+.hljs-dark-modern .hljs-template-variable {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-modern .hljs-attr,
+.hljs-dark-modern .hljs-property {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-modern .hljs-params {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-modern .hljs-regexp {
+  color: #d16969 !important;
+}
+
+.hljs-dark-modern .hljs-tag {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-modern .hljs-name {
+  color: #4ec9b0 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-modern .hljs-selector-id,
+.hljs-dark-modern .hljs-selector-class {
+  color: #d7ba7d !important;
+}
+
+.hljs-dark-modern .hljs-deletion {
+  color: #ce9178 !important;
+  background-color: rgba(206, 145, 120, 0.15) !important;
+}
+
+.hljs-dark-modern .hljs-meta {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-modern .hljs-punctuation {
+  color: #cccccc !important;
+}
+
+.hljs-dark-modern .hljs-type {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-modern .hljs-operator {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-modern .hljs-symbol {
+  color: #b5cea8 !important;
+}
+
+/* ============================================
+   VS Code Abyss Theme
+   ============================================ */
+.hljs-abyss {
+  color: #6688cc !important;
+  background-color: #000c18 !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-abyss .hljs-comment,
+.hljs-abyss .hljs-quote {
+  color: #384887 !important;
+  font-style: italic !important;
+}
+
+.hljs-abyss .hljs-keyword,
+.hljs-abyss .hljs-selector-tag {
+  color: #225588 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-abyss .hljs-string,
+.hljs-abyss .hljs-addition {
+  color: #22aa44 !important;
+}
+
+.hljs-abyss .hljs-number,
+.hljs-abyss .hljs-literal {
+  color: #f280d0 !important;
+}
+
+.hljs-abyss .hljs-built_in,
+.hljs-abyss .hljs-builtin-name {
+  color: #9966b8 !important;
+}
+
+.hljs-abyss .hljs-function,
+.hljs-abyss .hljs-title,
+.hljs-abyss .hljs-title.function_ {
+  color: #ddbb88 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-abyss .hljs-class .hljs-title,
+.hljs-abyss .hljs-title.class_ {
+  color: #ffeebb !important;
+  font-weight: 600 !important;
+}
+
+.hljs-abyss .hljs-variable,
+.hljs-abyss .hljs-template-variable {
+  color: #6688cc !important;
+}
+
+.hljs-abyss .hljs-attr,
+.hljs-abyss .hljs-property {
+  color: #ddbb88 !important;
+}
+
+.hljs-abyss .hljs-params {
+  color: #6688cc !important;
+}
+
+.hljs-abyss .hljs-regexp {
+  color: #22aa44 !important;
+}
+
+.hljs-abyss .hljs-tag {
+  color: #225588 !important;
+}
+
+.hljs-abyss .hljs-name {
+  color: #225588 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-abyss .hljs-selector-id,
+.hljs-abyss .hljs-selector-class {
+  color: #ffeebb !important;
+}
+
+.hljs-abyss .hljs-deletion {
+  color: #ef5050 !important;
+  background-color: rgba(239, 80, 80, 0.15) !important;
+}
+
+.hljs-abyss .hljs-meta {
+  color: #384887 !important;
+}
+
+.hljs-abyss .hljs-punctuation {
+  color: #6688cc !important;
+}
+
+.hljs-abyss .hljs-type {
+  color: #9966b8 !important;
+}
+
+.hljs-abyss .hljs-operator {
+  color: #6688cc !important;
+}
+
+.hljs-abyss .hljs-symbol {
+  color: #f280d0 !important;
+}
+
+/* ============================================
+   VS Code Dark (Visual Studio) Theme
+   ============================================ */
+.hljs-dark-vs {
+  color: #d4d4d4 !important;
+  background-color: #1e1e1e !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-dark-vs .hljs-comment,
+.hljs-dark-vs .hljs-quote {
+  color: #608b4e !important;
+  font-style: italic !important;
+}
+
+.hljs-dark-vs .hljs-keyword,
+.hljs-dark-vs .hljs-selector-tag {
+  color: #569cd6 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-vs .hljs-string,
+.hljs-dark-vs .hljs-addition {
+  color: #d69d85 !important;
+}
+
+.hljs-dark-vs .hljs-number,
+.hljs-dark-vs .hljs-literal {
+  color: #b5cea8 !important;
+}
+
+.hljs-dark-vs .hljs-built_in,
+.hljs-dark-vs .hljs-builtin-name {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-vs .hljs-function,
+.hljs-dark-vs .hljs-title,
+.hljs-dark-vs .hljs-title.function_ {
+  color: #dcdcaa !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-vs .hljs-class .hljs-title,
+.hljs-dark-vs .hljs-title.class_ {
+  color: #4ec9b0 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-vs .hljs-variable,
+.hljs-dark-vs .hljs-template-variable {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-vs .hljs-attr,
+.hljs-dark-vs .hljs-property {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-vs .hljs-params {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-vs .hljs-regexp {
+  color: #d16969 !important;
+}
+
+.hljs-dark-vs .hljs-tag {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-vs .hljs-name {
+  color: #569cd6 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-vs .hljs-selector-id,
+.hljs-dark-vs .hljs-selector-class {
+  color: #d7ba7d !important;
+}
+
+.hljs-dark-vs .hljs-deletion {
+  color: #d69d85 !important;
+  background-color: rgba(214, 157, 133, 0.15) !important;
+}
+
+.hljs-dark-vs .hljs-meta {
+  color: #9b9b9b !important;
+}
+
+.hljs-dark-vs .hljs-punctuation {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-vs .hljs-type {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-vs .hljs-operator {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-vs .hljs-symbol {
+  color: #b5cea8 !important;
+}
+
+/* ============================================
+   VS Code Dark+ Theme
+   ============================================ */
+.hljs-dark-plus {
+  color: #d4d4d4 !important;
+  background-color: #1e1e1e !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-dark-plus .hljs-comment,
+.hljs-dark-plus .hljs-quote {
+  color: #6a9955 !important;
+  font-style: italic !important;
+}
+
+.hljs-dark-plus .hljs-keyword,
+.hljs-dark-plus .hljs-selector-tag {
+  color: #c586c0 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-plus .hljs-string,
+.hljs-dark-plus .hljs-addition {
+  color: #ce9178 !important;
+}
+
+.hljs-dark-plus .hljs-number,
+.hljs-dark-plus .hljs-literal {
+  color: #b5cea8 !important;
+}
+
+.hljs-dark-plus .hljs-built_in,
+.hljs-dark-plus .hljs-builtin-name {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-plus .hljs-function,
+.hljs-dark-plus .hljs-title,
+.hljs-dark-plus .hljs-title.function_ {
+  color: #dcdcaa !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-plus .hljs-class .hljs-title,
+.hljs-dark-plus .hljs-title.class_ {
+  color: #4ec9b0 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-plus .hljs-variable,
+.hljs-dark-plus .hljs-template-variable {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-plus .hljs-attr,
+.hljs-dark-plus .hljs-property {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-plus .hljs-params {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-plus .hljs-regexp {
+  color: #d16969 !important;
+}
+
+.hljs-dark-plus .hljs-tag {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-plus .hljs-name {
+  color: #4ec9b0 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-dark-plus .hljs-selector-id,
+.hljs-dark-plus .hljs-selector-class {
+  color: #d7ba7d !important;
+}
+
+.hljs-dark-plus .hljs-deletion {
+  color: #ce9178 !important;
+  background-color: rgba(206, 145, 120, 0.15) !important;
+}
+
+.hljs-dark-plus .hljs-meta {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-plus .hljs-punctuation {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-plus .hljs-type {
+  color: #4ec9b0 !important;
+}
+
+.hljs-dark-plus .hljs-operator {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-plus .hljs-symbol {
+  color: #b5cea8 !important;
+}
+
+/* ============================================
+   Solarized Dark Theme
+   ============================================ */
+.hljs-solarized-dark {
+  color: #839496 !important;
+  background-color: #002b36 !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-solarized-dark .hljs-comment,
+.hljs-solarized-dark .hljs-quote {
+  color: #586e75 !important;
+  font-style: italic !important;
+}
+
+.hljs-solarized-dark .hljs-keyword,
+.hljs-solarized-dark .hljs-selector-tag {
+  color: #859900 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-solarized-dark .hljs-string,
+.hljs-solarized-dark .hljs-addition {
+  color: #2aa198 !important;
+}
+
+.hljs-solarized-dark .hljs-number,
+.hljs-solarized-dark .hljs-literal {
+  color: #d33682 !important;
+}
+
+.hljs-solarized-dark .hljs-built_in,
+.hljs-solarized-dark .hljs-builtin-name {
+  color: #b58900 !important;
+}
+
+.hljs-solarized-dark .hljs-function,
+.hljs-solarized-dark .hljs-title,
+.hljs-solarized-dark .hljs-title.function_ {
+  color: #268bd2 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-solarized-dark .hljs-class .hljs-title,
+.hljs-solarized-dark .hljs-title.class_ {
+  color: #b58900 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-solarized-dark .hljs-variable,
+.hljs-solarized-dark .hljs-template-variable {
+  color: #268bd2 !important;
+}
+
+.hljs-solarized-dark .hljs-attr,
+.hljs-solarized-dark .hljs-property {
+  color: #93a1a1 !important;
+}
+
+.hljs-solarized-dark .hljs-params {
+  color: #839496 !important;
+}
+
+.hljs-solarized-dark .hljs-regexp {
+  color: #dc322f !important;
+}
+
+.hljs-solarized-dark .hljs-tag {
+  color: #268bd2 !important;
+}
+
+.hljs-solarized-dark .hljs-name {
+  color: #268bd2 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-solarized-dark .hljs-selector-id,
+.hljs-solarized-dark .hljs-selector-class {
+  color: #268bd2 !important;
+}
+
+.hljs-solarized-dark .hljs-deletion {
+  color: #dc322f !important;
+  background-color: rgba(220, 50, 47, 0.15) !important;
+}
+
+.hljs-solarized-dark .hljs-meta {
+  color: #cb4b16 !important;
+}
+
+.hljs-solarized-dark .hljs-punctuation {
+  color: #839496 !important;
+}
+
+.hljs-solarized-dark .hljs-type {
+  color: #b58900 !important;
+}
+
+.hljs-solarized-dark .hljs-operator {
+  color: #859900 !important;
+}
+
+.hljs-solarized-dark .hljs-symbol {
+  color: #cb4b16 !important;
+}
+
+/* ============================================
+   Monokai Dimmed Theme
+   ============================================ */
+.hljs-monokai-dimmed {
+  color: #c5c8c6 !important;
+  background-color: #1e1e1e !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-monokai-dimmed .hljs-comment,
+.hljs-monokai-dimmed .hljs-quote {
+  color: #9a9b99 !important;
+  font-style: italic !important;
+}
+
+.hljs-monokai-dimmed .hljs-keyword,
+.hljs-monokai-dimmed .hljs-selector-tag {
+  color: #c792ea !important;
+  font-weight: 500 !important;
+}
+
+.hljs-monokai-dimmed .hljs-string,
+.hljs-monokai-dimmed .hljs-addition {
+  color: #9cc46b !important;
+}
+
+.hljs-monokai-dimmed .hljs-number,
+.hljs-monokai-dimmed .hljs-literal {
+  color: #b9a0d2 !important;
+}
+
+.hljs-monokai-dimmed .hljs-built_in,
+.hljs-monokai-dimmed .hljs-builtin-name {
+  color: #6eb4bf !important;
+}
+
+.hljs-monokai-dimmed .hljs-function,
+.hljs-monokai-dimmed .hljs-title,
+.hljs-monokai-dimmed .hljs-title.function_ {
+  color: #a4c161 !important;
+  font-weight: 500 !important;
+}
+
+.hljs-monokai-dimmed .hljs-class .hljs-title,
+.hljs-monokai-dimmed .hljs-title.class_ {
+  color: #a4c161 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-monokai-dimmed .hljs-variable,
+.hljs-monokai-dimmed .hljs-template-variable {
+  color: #c5c8c6 !important;
+}
+
+.hljs-monokai-dimmed .hljs-attr,
+.hljs-monokai-dimmed .hljs-property {
+  color: #a4c161 !important;
+}
+
+.hljs-monokai-dimmed .hljs-params {
+  color: #c5c8c6 !important;
+}
+
+.hljs-monokai-dimmed .hljs-regexp {
+  color: #9cc46b !important;
+}
+
+.hljs-monokai-dimmed .hljs-tag {
+  color: #c792ea !important;
+}
+
+.hljs-monokai-dimmed .hljs-name {
+  color: #c792ea !important;
+  font-weight: 500 !important;
+}
+
+.hljs-monokai-dimmed .hljs-selector-id,
+.hljs-monokai-dimmed .hljs-selector-class {
+  color: #a4c161 !important;
+}
+
+.hljs-monokai-dimmed .hljs-deletion {
+  color: #c792ea !important;
+  background-color: rgba(199, 146, 234, 0.15) !important;
+}
+
+.hljs-monokai-dimmed .hljs-meta {
+  color: #9a9b99 !important;
+}
+
+.hljs-monokai-dimmed .hljs-punctuation {
+  color: #c5c8c6 !important;
+}
+
+.hljs-monokai-dimmed .hljs-type {
+  color: #6eb4bf !important;
+  font-style: italic !important;
+}
+
+.hljs-monokai-dimmed .hljs-operator {
+  color: #c792ea !important;
+}
+
+.hljs-monokai-dimmed .hljs-symbol {
+  color: #b9a0d2 !important;
+}
+
+/* ============================================
+   Dark High Contrast Theme
+   ============================================ */
+.hljs-dark-high-contrast {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace !important;
+}
+
+.hljs-dark-high-contrast .hljs-comment,
+.hljs-dark-high-contrast .hljs-quote {
+  color: #7ca668 !important;
+  font-style: italic !important;
+}
+
+.hljs-dark-high-contrast .hljs-keyword,
+.hljs-dark-high-contrast .hljs-selector-tag {
+  color: #569cd6 !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-high-contrast .hljs-string,
+.hljs-dark-high-contrast .hljs-addition {
+  color: #ce9178 !important;
+}
+
+.hljs-dark-high-contrast .hljs-number,
+.hljs-dark-high-contrast .hljs-literal {
+  color: #b5cea8 !important;
+}
+
+.hljs-dark-high-contrast .hljs-built_in,
+.hljs-dark-high-contrast .hljs-builtin-name {
+  color: #4fc1ff !important;
+}
+
+.hljs-dark-high-contrast .hljs-function,
+.hljs-dark-high-contrast .hljs-title,
+.hljs-dark-high-contrast .hljs-title.function_ {
+  color: #dcdcaa !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-high-contrast .hljs-class .hljs-title,
+.hljs-dark-high-contrast .hljs-title.class_ {
+  color: #4fc1ff !important;
+  font-weight: 700 !important;
+}
+
+.hljs-dark-high-contrast .hljs-variable,
+.hljs-dark-high-contrast .hljs-template-variable {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-high-contrast .hljs-attr,
+.hljs-dark-high-contrast .hljs-property {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-high-contrast .hljs-params {
+  color: #9cdcfe !important;
+}
+
+.hljs-dark-high-contrast .hljs-regexp {
+  color: #d16969 !important;
+}
+
+.hljs-dark-high-contrast .hljs-tag {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-high-contrast .hljs-name {
+  color: #4fc1ff !important;
+  font-weight: 600 !important;
+}
+
+.hljs-dark-high-contrast .hljs-selector-id,
+.hljs-dark-high-contrast .hljs-selector-class {
+  color: #d7ba7d !important;
+}
+
+.hljs-dark-high-contrast .hljs-deletion {
+  color: #f14c4c !important;
+  background-color: rgba(241, 76, 76, 0.2) !important;
+}
+
+.hljs-dark-high-contrast .hljs-meta {
+  color: #569cd6 !important;
+}
+
+.hljs-dark-high-contrast .hljs-punctuation {
+  color: #ffffff !important;
+}
+
+.hljs-dark-high-contrast .hljs-type {
+  color: #4fc1ff !important;
+}
+
+.hljs-dark-high-contrast .hljs-operator {
+  color: #d4d4d4 !important;
+}
+
+.hljs-dark-high-contrast .hljs-symbol {
+  color: #b5cea8 !important;
+}
+
+/* ============================================
+   Monaco Editor Background Overrides for New Themes
+   ============================================ */
+
+/* Dark Modern */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .view-overlays .current-line {
+  background-color: #1f1f1f !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-modern .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-modern .line-numbers {
+  color: #6e7681 !important;
+}
+
+/* Abyss */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .view-overlays .current-line {
+  background-color: #000c18 !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-abyss .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-abyss .line-numbers {
+  color: #6688cc !important;
+}
+
+/* Dark VS */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .view-overlays .current-line {
+  background-color: #1e1e1e !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-vs .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-vs .line-numbers {
+  color: #858585 !important;
+}
+
+/* Dark+ */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .view-overlays .current-line {
+  background-color: #1e1e1e !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-plus .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-plus .line-numbers {
+  color: #858585 !important;
+}
+
+/* Solarized Dark */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .view-overlays .current-line {
+  background-color: #002b36 !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-solarized-dark .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-solarized-dark .line-numbers {
+  color: #586e75 !important;
+}
+
+/* Monokai Dimmed */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .view-overlays .current-line {
+  background-color: #1e1e1e !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-monokai-dimmed .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-monokai-dimmed .line-numbers {
+  color: #90908a !important;
+}
+
+/* Dark High Contrast */
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .monaco-editor-background,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .lines-content,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .margin,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .overflow-guard,
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .view-overlays .current-line,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .monaco-editor-background,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .lines-content,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .margin,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .overflow-guard,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .view-overlays .current-line {
+  background-color: #000000 !important;
+}
+
+.monaco-editor.vs.azure-syntax-editor.azure-theme-dark-high-contrast .line-numbers,
+.monaco-editor.vs-dark.azure-syntax-editor.azure-theme-dark-high-contrast .line-numbers {
+  color: #ffffff !important;
+}
+
+/* Update common styles to include new themes */
+.hljs-dark-modern .hljs-emphasis,
+.hljs-abyss .hljs-emphasis,
+.hljs-dark-vs .hljs-emphasis,
+.hljs-dark-plus .hljs-emphasis,
+.hljs-solarized-dark .hljs-emphasis,
+.hljs-monokai-dimmed .hljs-emphasis,
+.hljs-dark-high-contrast .hljs-emphasis {
+  font-style: italic !important;
+}
+
+.hljs-dark-modern .hljs-strong,
+.hljs-abyss .hljs-strong,
+.hljs-dark-vs .hljs-strong,
+.hljs-dark-plus .hljs-strong,
+.hljs-solarized-dark .hljs-strong,
+.hljs-monokai-dimmed .hljs-strong,
+.hljs-dark-high-contrast .hljs-strong {
+  font-weight: bold !important;
+}
