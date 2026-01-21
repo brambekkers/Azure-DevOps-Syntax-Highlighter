@@ -2,7 +2,7 @@ import '../../globals.css'
 import { useEffect, useState } from 'kaioken'
 import { languages } from '../contentScript/languages'
 
-type Theme = 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'one-dark' | 'dark-modern' | 'abyss' | 'dark-vs' | 'dark-plus' | 'solarized-dark' | 'monokai-dimmed' | 'dark-high-contrast' | 'auto'
+type Theme = 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'dark-modern' | 'dark-plus' | 'monokai-dimmed' | 'dark-high-contrast' | 'night-owl' | 'tokyo-night' | 'synthwave-84' | 'gruvbox-dark' | 'solarized-light' | 'quiet-light' | 'light-plus' | 'auto';
 
 interface Settings {
   enabled: boolean
@@ -87,18 +87,21 @@ function App() {
           </optgroup>
           <optgroup label="Light Themes">
             <option value="github-light">GitHub Light</option>
+            <option value="solarized-light">Solarized Light</option>
+            <option value="quiet-light">Quiet Light</option>
+            <option value="light-plus">Light+ (VS Code)</option>
           </optgroup>
           <optgroup label="Dark Themes">
             <option value="github-dark">GitHub Dark</option>
             <option value="dark-modern">Dark Modern (VS Code)</option>
             <option value="dark-plus">Dark+ (VS Code)</option>
-            <option value="dark-vs">Dark (Visual Studio)</option>
-            <option value="one-dark">One Dark</option>
             <option value="monokai">Monokai</option>
             <option value="monokai-dimmed">Monokai Dimmed</option>
             <option value="dracula">Dracula</option>
-            <option value="abyss">Abyss</option>
-            <option value="solarized-dark">Solarized Dark</option>
+            <option value="night-owl">Night Owl</option>
+            <option value="tokyo-night">Tokyo Night</option>
+            <option value="synthwave-84">Synthwave '84</option>
+            <option value="gruvbox-dark">Gruvbox Dark</option>
             <option value="dark-high-contrast">Dark High Contrast</option>
           </optgroup>
         </select>
