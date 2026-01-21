@@ -50,17 +50,52 @@ const highlightedElements = new WeakSet<Element>()
  * Detect if Azure DevOps is in dark mode
  */
 function isAzureDevOpsDarkMode(): boolean {
-  // Azure DevOps adds data-theme attribute or specific classes for dark mode
+  // Azure DevOps uses various ways to indicate dark mode
   const body = document.body
-  return (
-    body.dataset.theme?.includes('dark') ||
+  const html = document.documentElement
+
+  // Check data-theme attributes (Azure DevOps standard)
+  if (body.dataset.theme?.includes('dark') || html.dataset.theme?.includes('dark')) {
+    return true
+  }
+
+  // Check for dark theme classes
+  if (
     body.classList.contains('dark-theme') ||
-    document.documentElement.dataset.theme?.includes('dark') ||
-    // Fallback: check computed background color
-    getComputedStyle(body).backgroundColor.includes('rgb(30') ||
-    getComputedStyle(body).backgroundColor.includes('rgb(31') ||
-    getComputedStyle(body).backgroundColor.includes('rgb(32')
-  )
+    body.classList.contains('theme-dark') ||
+    html.classList.contains('dark-theme') ||
+    html.classList.contains('theme-dark')
+  ) {
+    return true
+  }
+
+  // Check for Azure DevOps specific dark mode indicator
+  // Azure DevOps uses .vss-style-dark or data-* attributes
+  if (body.classList.contains('vss-style-dark') || html.classList.contains('vss-style-dark')) {
+    return true
+  }
+
+  // Check for color-scheme meta or CSS property
+  const colorScheme = getComputedStyle(html).colorScheme
+  if (colorScheme === 'dark') {
+    return true
+  }
+
+  // Fallback: check computed background color of body
+  // Dark themes typically have low RGB values
+  const bgColor = getComputedStyle(body).backgroundColor
+  const rgbMatch = bgColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/)
+  if (rgbMatch) {
+    const r = parseInt(rgbMatch[1])
+    const g = parseInt(rgbMatch[2])
+    const b = parseInt(rgbMatch[3])
+    // If average color value is less than 50, it's likely dark
+    if ((r + g + b) / 3 < 50) {
+      return true
+    }
+  }
+
+  return false
 }
 
 /**
@@ -78,7 +113,17 @@ const THEME_CLASSES = [
   'hljs-github-dark',
   'hljs-monokai',
   'hljs-dracula',
-  'hljs-one-dark',
+  'hljs-dark-modern',
+  'hljs-dark-plus',
+  'hljs-monokai-dimmed',
+  'hljs-dark-high-contrast',
+  'hljs-night-owl',
+  'hljs-tokyo-night',
+  'hljs-synthwave-84',
+  'hljs-gruvbox-dark',
+  'hljs-solarized-light',
+  'hljs-quiet-light',
+  'hljs-light-plus',
 ]
 
 // Theme background colors
@@ -87,7 +132,17 @@ const THEME_BACKGROUNDS: Record<string, string> = {
   'hljs-github-dark': '#0d1117',
   'hljs-monokai': '#272822',
   'hljs-dracula': '#282a36',
-  'hljs-one-dark': '#282c34',
+  'hljs-dark-modern': '#1f1f1f',
+  'hljs-dark-plus': '#1e1e1e',
+  'hljs-monokai-dimmed': '#1e1e1e',
+  'hljs-dark-high-contrast': '#000000',
+  'hljs-night-owl': '#011627',
+  'hljs-tokyo-night': '#1a1b26',
+  'hljs-synthwave-84': '#262335',
+  'hljs-gruvbox-dark': '#282828',
+  'hljs-solarized-light': '#fdf6e3',
+  'hljs-quiet-light': '#f5f5f5',
+  'hljs-light-plus': '#ffffff',
 }
 
 // Theme line number colors
@@ -96,7 +151,17 @@ const THEME_LINE_COLORS: Record<string, string> = {
   'hljs-github-dark': '#6e7681',
   'hljs-monokai': '#90908a',
   'hljs-dracula': '#6272a4',
-  'hljs-one-dark': '#495162',
+  'hljs-dark-modern': '#6e7681',
+  'hljs-dark-plus': '#858585',
+  'hljs-monokai-dimmed': '#90908a',
+  'hljs-dark-high-contrast': '#ffffff',
+  'hljs-night-owl': '#4b6479',
+  'hljs-tokyo-night': '#3b4261',
+  'hljs-synthwave-84': '#848bbd',
+  'hljs-gruvbox-dark': '#665c54',
+  'hljs-solarized-light': '#839496',
+  'hljs-quiet-light': '#333333',
+  'hljs-light-plus': '#237893',
 }
 
 /**

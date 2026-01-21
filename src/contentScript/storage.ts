@@ -4,7 +4,23 @@
 
 export interface UserSettings {
   enabled: boolean
-  theme: 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'one-dark' | 'auto'
+  theme:
+    | 'github-dark'
+    | 'github-light'
+    | 'monokai'
+    | 'dracula'
+    | 'dark-modern'
+    | 'dark-plus'
+    | 'monokai-dimmed'
+    | 'dark-high-contrast'
+    | 'night-owl'
+    | 'tokyo-night'
+    | 'synthwave-84'
+    | 'gruvbox-dark'
+    | 'solarized-light'
+    | 'quiet-light'
+    | 'light-plus'
+    | 'auto'
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
