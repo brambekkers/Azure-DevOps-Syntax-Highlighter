@@ -340,8 +340,10 @@ function highlightCodeLine(lineElement: Element, language: string): void {
   )
   const target = codeContent || lineElement
 
-  // Get the text content
-  const code = target.textContent || ''
+  // Get the text content and replace Monaco whitespace dots with actual spaces
+  const rawCode = target.textContent || ''
+  // Monaco renders whitespace as middle-dot (·) characters - convert them back to spaces
+  const code = rawCode.replace(/·/g, ' ')
   if (!code.trim()) {
     return
   }
