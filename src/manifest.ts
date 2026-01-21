@@ -20,28 +20,29 @@ export default defineManifest({
     default_icon: 'icons/logo.svg',
   },
   options_page: 'options.html',
-  devtools_page: 'devtools.html',
   background: {
     service_worker: 'src/background/index.ts',
     type: 'module',
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*'],
+      matches: ['https://dev.azure.com/*', 'https://*.visualstudio.com/*'],
       js: ['src/contentScript/index.ts'],
+      css: ['css/highlight.css'],
+      run_at: 'document_end',
     },
   ],
-  side_panel: {
-    default_path: 'sidepanel.html',
-  },
   web_accessible_resources: [
     {
-      resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png'],
-      matches: [],
+      resources: [
+        'img/logo-16.png',
+        'img/logo-34.png',
+        'img/logo-48.png',
+        'img/logo-128.png',
+        'assets/*',
+      ],
+      matches: ['https://dev.azure.com/*', 'https://*.visualstudio.com/*'],
     },
   ],
-  permissions: ['sidePanel', 'storage'],
-  chrome_url_overrides: {
-    newtab: 'newtab.html',
-  },
+  permissions: ['storage', 'activeTab'],
 })

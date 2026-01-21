@@ -10,8 +10,18 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       outDir: 'build',
       rollupOptions: {
+        input: {
+          contentScript: 'src/contentScript/index.ts',
+        },
         output: {
           chunkFileNames: 'assets/chunk-[hash].js',
+          // Ensure content script is bundled as a single file
+          manualChunks: (id) => {
+            // Bundle highlight.js with the content script
+            if (id.includes('highlight.js') || id.includes('contentScript')) {
+              return undefined // Don't split into separate chunk
+            }
+          },
         },
       },
     },

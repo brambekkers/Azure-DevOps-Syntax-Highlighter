@@ -1,58 +1,120 @@
 import '../../globals.css'
 import { useEffect, useState } from 'kaioken'
+import { languages } from '../contentScript/languages'
+
+type Theme = 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'one-dark' | 'auto'
+
+interface Settings {
+  enabled: boolean
+  theme: Theme
+}
+
+const DEFAULT_SETTINGS: Settings = {
+  enabled: true,
+  theme: 'auto',
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS)
+  const [saved, setSaved] = useState(false)
 
-  const increment = () => {
-    setCount(count + 1)
-  }
-
-  const decrement = () => {
-    setCount(count - 1)
-  }
-
-  const openOptions =() =>{
-    chrome.runtime.openOptionsPage();
-  }
-
-  // first mount
+  // Load settings on mount
   useEffect(() => {
-    chrome.storage.sync.get(['count'], (result) => {
-      setCount(result.count || 0)
+    chrome.storage.sync.get(['settings'], (result) => {
+      if (result.settings) {
+        setSettings({ ...DEFAULT_SETTINGS, ...result.settings })
+      }
     })
   }, [])
 
-  useEffect(() => {
-    chrome.storage.sync.set({ count })
-    chrome.runtime.sendMessage({ type: 'COUNT', count })
-  }, [count])
+  // Save settings when changed
+  const updateSettings = (newSettings: Partial<Settings>) => {
+    const updated = { ...settings, ...newSettings }
+    setSettings(updated)
+    chrome.storage.sync.set({ settings: updated }, () => {
+      setSaved(true)
+      setTimeout(() => setSaved(false), 1500)
+    })
+  }
+
+  const toggleEnabled = () => {
+    updateSettings({ enabled: !settings.enabled })
+  }
+
+  const changeTheme = (e: Event) => {
+    const target = e.target as HTMLSelectElement
+    updateSettings({ theme: target.value as Theme })
+  }
 
   return (
-    <main className="w-full h-full min-h-[10rem] min-w-[20rem] flex flex-col items-start justify-start p-4">
-      <span className="font-bold font-mono text-center text-primary/80">
-        this is the popup page!
-      </span>
-      <div className="w-full flex flex-col justify-between items-center p-2">
-        <span className="text-center font-serif font-bold text-primary/80">Counter</span>
-        <div className='w-full flex items-center justify-between'>
-          <button
-            onclick={decrement}
-            className="bg-primary/5 py-2 px-4 border border-primary/30 shadow drop-shadow hover:border-primary transition-colors"
-          >
-            -
-          </button>
-          <span>{count}</span>
-          <button
-            onclick={increment}
-            className="bg-primary/5 py-2 px-4 border border-primary/30 shadow drop-shadow hover:border-primary transition-colors"
-          >
-            +
-          </button>
+    <main className="w-[320px] min-h-[200px] flex flex-col p-4 bg-white">
+      {/* Header */}
+      <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-200">
+        <span className="text-xl">🎨</span>
+        <h1 className="font-bold text-lg text-gray-800">Azure Syntax Highlighter</h1>
+      </div>
+
+      {/* Enable/Disable Toggle */}
+      <div className="flex items-center justify-between mb-4">
+        <span className="text-sm font-medium text-gray-700">Syntax Highlighting</span>
+        <button
+          onclick={toggleEnabled}
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+            settings.enabled ? 'bg-blue-600' : 'bg-gray-300'
+          }`}
+        >
+          <span
+            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              settings.enabled ? 'translate-x-6' : 'translate-x-1'
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Theme Selection */}
+      <div className="mb-4">
+        <label htmlFor="theme-select" className="block text-sm font-medium text-gray-700 mb-1">
+          Theme
+        </label>
+        <select
+          id="theme-select"
+          value={settings.theme}
+          onchange={changeTheme}
+          className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="auto">Auto (match Azure DevOps)</option>
+          <option value="github-light">GitHub Light</option>
+          <option value="github-dark">GitHub Dark</option>
+          <option value="monokai">Monokai</option>
+          <option value="dracula">Dracula</option>
+          <option value="one-dark">One Dark</option>
+        </select>
+      </div>
+
+      {/* Supported Languages */}
+      <div className="mb-4">
+        <h2 className="text-sm font-medium text-gray-700 mb-2">Supported Languages</h2>
+        <div className="flex flex-wrap gap-1">
+          {languages.map((lang) => (
+            <span key={lang.hljs} className="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded">
+              {lang.name}
+            </span>
+          ))}
         </div>
       </div>
 
-      <button className='bg-primary/5 py-2 px-4 border border-primary/30 shadow drop-shadow hover:border-primary transition-colors mt-2 mx-auto' onclick={openOptions}>open options page _↗ </button>
+      {/* Status indicator */}
+      <div className="mt-auto pt-3 border-t border-gray-200">
+        <div className="flex items-center justify-between text-xs text-gray-500">
+          <span>
+            Status:{' '}
+            <span className={settings.enabled ? 'text-green-600' : 'text-gray-400'}>
+              {settings.enabled ? '● Active' : '○ Disabled'}
+            </span>
+          </span>
+          {saved && <span className="text-green-600">✓ Saved</span>}
+        </div>
+      </div>
     </main>
   )
 }
