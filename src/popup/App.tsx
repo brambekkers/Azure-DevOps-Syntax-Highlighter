@@ -7,11 +7,15 @@ type Theme = 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'dark-mode
 interface Settings {
   enabled: boolean
   theme: Theme
+  fontSize: number
+  lineHeight: number
 }
 
 const DEFAULT_SETTINGS: Settings = {
   enabled: true,
   theme: 'auto',
+  fontSize: 14,
+  lineHeight: 1.5,
 }
 
 function App() {
@@ -44,6 +48,16 @@ function App() {
   const changeTheme = (e: Event) => {
     const target = e.target as HTMLSelectElement
     updateSettings({ theme: target.value as Theme })
+  }
+
+  const changeFontSize = (e: Event) => {
+    const target = e.target as HTMLInputElement
+    updateSettings({ fontSize: parseInt(target.value) })
+  }
+
+  const changeLineHeight = (e: Event) => {
+    const target = e.target as HTMLInputElement
+    updateSettings({ lineHeight: parseFloat(target.value) })
   }
 
   return (
@@ -105,6 +119,53 @@ function App() {
             <option value="dark-high-contrast">Dark High Contrast</option>
           </optgroup>
         </select>
+      </div>
+
+      {/* Font Size Selection */}
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-1">
+          <label htmlFor="font-size-slider" className="block text-sm font-medium text-gray-700">
+            Font Size
+          </label>
+          <span className="text-sm font-medium text-blue-600">{settings.fontSize}px</span>
+        </div>
+        <input
+          id="font-size-slider"
+          type="range"
+          min="10"
+          max="24"
+          value={settings.fontSize}
+          onchange={changeFontSize}
+          className="w-full"
+        />
+        <div className="flex justify-between text-xs text-gray-500 mt-1">
+          <span>10px</span>
+          <span>24px</span>
+        </div>
+      </div>
+
+      {/* Line Height Selection */}
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-1">
+          <label htmlFor="line-height-slider" className="block text-sm font-medium text-gray-700">
+            Line Height
+          </label>
+          <span className="text-sm font-medium text-blue-600">{settings.lineHeight}</span>
+        </div>
+        <input
+          id="line-height-slider"
+          type="range"
+          min="1"
+          max="2.5"
+          step="0.1"
+          value={settings.lineHeight}
+          onchange={changeLineHeight}
+          className="w-full"
+        />
+        <div className="flex justify-between text-xs text-gray-500 mt-1">
+          <span>1.0</span>
+          <span>2.5</span>
+        </div>
       </div>
 
       {/* Supported Languages */}

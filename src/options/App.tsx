@@ -7,11 +7,15 @@ type Theme = 'github-dark' | 'github-light' | 'monokai' | 'dracula' | 'dark-mode
 interface Settings {
   enabled: boolean
   theme: Theme
+  fontSize: number
+  lineHeight: number
 }
 
 const DEFAULT_SETTINGS: Settings = {
   enabled: true,
   theme: 'auto',
+  fontSize: 14,
+  lineHeight: 1.5,
 }
 
 function App() {
@@ -72,7 +76,7 @@ function App() {
           </button>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 pb-4 border-b">
           <label className="font-medium text-gray-700">Theme</label>
           <p className="text-sm text-gray-500 mb-2">Choose your preferred color scheme</p>
           <select
@@ -105,6 +109,45 @@ function App() {
               <option value="dark-high-contrast">Dark High Contrast</option>
             </optgroup>
           </select>
+        </div>
+
+        <div className="mb-4 pb-4 border-b">
+          <label className="font-medium text-gray-700">Font Size</label>
+          <p className="text-sm text-gray-500 mb-2">Adjust code font size: {settings.fontSize}px</p>
+          <input
+            type="range"
+            min="10"
+            max="24"
+            value={settings.fontSize}
+            onchange={(e: Event) =>
+              updateSettings({ fontSize: parseInt((e.target as HTMLInputElement).value) })
+            }
+            className="w-full"
+          />
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>10px</span>
+            <span>24px</span>
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label className="font-medium text-gray-700">Line Height</label>
+          <p className="text-sm text-gray-500 mb-2">Adjust line spacing: {settings.lineHeight}</p>
+          <input
+            type="range"
+            min="1"
+            max="2.5"
+            step="0.1"
+            value={settings.lineHeight}
+            onchange={(e: Event) =>
+              updateSettings({ lineHeight: parseFloat((e.target as HTMLInputElement).value) })
+            }
+            className="w-full"
+          />
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>1.0</span>
+            <span>2.5</span>
+          </div>
         </div>
       </div>
 

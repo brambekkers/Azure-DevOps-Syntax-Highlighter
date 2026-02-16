@@ -21,11 +21,15 @@ export interface UserSettings {
     | 'quiet-light'
     | 'light-plus'
     | 'auto'
+  fontSize: number
+  lineHeight: number
 }
 
 export const DEFAULT_SETTINGS: UserSettings = {
   enabled: true,
   theme: 'auto',
+  fontSize: 14,
+  lineHeight: 1.5,
 }
 
 /**
